@@ -12,22 +12,22 @@ const Collection = () => {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 justify-between gap-5 sm:gap-10">
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/236x/14/67/54/1467540e9234176c33a95ea354115aae.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/736x/4b/9e/08/4b9e08bc045ba6a947eaf21ea178a56d.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/236x/68/00/63/6800635806227be445489283156362e1.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/564x/b5/21/c8/b521c8dc26cb0b4cabedb12a76216ab5.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/236x/77/c0/aa/77c0aa1b02c3ddc891bf4787d2384c5d.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/564x/1f/5e/dd/1f5edda1f8240dc3473dea2f51326229.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/564x/58/80/e9/5880e9d99239fe1cdbab52c631078be7.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/564x/93/59/30/9359304376320fb1dc49b6a62d584c39.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/236x/15/f5/cf/15f5cfb96c7892744f7e6a266e7da088.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/564x/d8/3e/66/d83e660451af51e1cba935b9d2d207e8.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                     <Link href="/" className="flex flex-col items-center gap-3 cursor-pointer">
-                        <img src="https://i.pinimg.com/236x/51/57/b3/5157b31fdd79a4346348a415f9f17903.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
+                        <img src="https://i.pinimg.com/564x/c8/96/ad/c896ad6dc28a942dd76d2713f0c85cc7.jpg" alt="" className="w-[300px] h-[200px] sm:h-[300px] object-cover" />
                     </Link>
                 </div>
             </div>
