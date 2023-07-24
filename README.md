@@ -1,3 +1,7 @@
+
+![image](https://github.com/VatsalRathod07/SmartTailor/assets/125674048/ccd60a58-089d-42ba-a299-394f09c2bc85)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
