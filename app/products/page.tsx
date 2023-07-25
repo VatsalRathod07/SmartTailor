@@ -39,7 +39,7 @@ const ProductDetails = () => {
 
     return (
         <section className="products pt-5 sm:pt-10 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
-            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10 bg-white">
+            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10">
                 <div className="flex gap-3 sm:gap-0 justify-between items-center">
                     <h4 className="product-header text-Charcoal">Our Latest Product</h4>
 
@@ -60,7 +60,6 @@ const ProductDetails = () => {
                             <option value="latest">Sort by latest</option>
                             <option value="lowToHigh">Sort by price: low to high</option>
                             <option value="highToLow">Sort by price: high to low</option>
-                            <option value="filter">FilterLeft Sorting</option>
                         </select>
                     </div>
                     <div className="relative flex sm:hidden">
@@ -126,8 +125,8 @@ const ProductDetails = () => {
                                     />
                                 </div>
                                 <div className="product-details py-2 flex flex-col gap-[2px]">
-                                    <p className="product-name font-Playfair font-semibold text-base">{product.name}</p>
-                                    <p className="product-price text-sm text-Charcoal  font-medium">{product.price}</p>
+                                    <p className="product-name font-Playfair font-semibold text-base capitalize">{product.name}</p>
+                                    <p className="product-price text-sm text-Charcoal font-medium">{product.price}</p>
                                 </div>
                             </div>
                         </Link>

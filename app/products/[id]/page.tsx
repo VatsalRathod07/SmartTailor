@@ -2,16 +2,15 @@
 import CartSection from '@/app/cart/page';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { AiOutlineStar } from 'react-icons/ai'
 
 
 const products = [
     {
         id: 1,
-        name: 'original',
+        name: 'blanket',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
         price: '$153.00',
-        image: 'https://cdn.shopify.com/s/files/1/0250/8557/5222/files/Windowpane-for-Jackets-RIVULET-Fabric-fabricsight-Meters-Blue-Windowpane_2e41f361-db3d-4bef-8122-0f14b31c4706_480x480.jpg?v=1642514251',
+        image: 'https://cpimg.tistatic.com/07765791/b/4/Men-Unstitched-Check-Shirt-Fabric.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
         date: '3/2/2078',
@@ -19,10 +18,10 @@ const products = [
     },
     {
         id: 2,
-        name: 'chapter',
+        name: 'win',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
         price: '$174.00',
-        image: 'https://cdn.shopify.com/s/files/1/0250/8557/5222/files/Windowpane-for-Jackets-RIVULET-Fabric-fabricsight-Meters-Blue-Windowpane_2e41f361-db3d-4bef-8122-0f14b31c4706_480x480.jpg?v=1642514251',
+        image: 'https://cdn.thelibasstore.com/wp-content/uploads/2019/07/LSMONZASH72DKBLBGBRCHKHBTWJUN.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
         date: '11/8/2106',
@@ -30,10 +29,10 @@ const products = [
     },
     {
         id: 3,
-        name: 'vowel',
+        name: 'fifth',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
         price: '$145.00',
-        image: 'https://cdn.shopify.com/s/files/1/0250/8557/5222/files/Windowpane-for-Jackets-RIVULET-Fabric-fabricsight-Meters-Blue-Windowpane_2e41f361-db3d-4bef-8122-0f14b31c4706_480x480.jpg?v=1642514251',
+        image: 'https://cpimg.tistatic.com/07765787/b/4/Cotton-Checks-Shirt-Fabric.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
         date: '4/27/2081',
@@ -44,15 +43,15 @@ const products = [
 const productsImages = [
     {
         id: 1,
-        image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/74c2c253302487.5d41b3bd39817.jpg',
+        image: 'https://cdn.thelibasstore.com/wp-content/uploads/2020/01/LSMZSH80DKBLWHSTRPPOXJAN-3.jpg',
     },
     {
         id: 2,
-        image: 'https://cdn.trendhunterstatic.com/phpthumbnails/413/413793/413793_2_600.jpeg?auto=webp',
+        image: 'https://assets.ajio.com/medias/sys_master/root/20220704/EUmO/62c30266f997dd03e2b7b5b7/-1117Wx1400H-469158843-navy-MODEL2.jpg',
     },
     {
         id: 3,
-        image: 'https://img.designideas.pics/wp-content/uploads/formidable/13/01z2.jpg?strip=all&lossy=1&quality=80&ssl=1',
+        image: 'https://cdn.thelibasstore.com/wp-content/uploads/2020/01/LSMZSH80DKBLWHSTRPPOXJAN-1-510x435.jpg',
     },
 ]
 
@@ -83,7 +82,7 @@ const ProductDetails = () => {
                 <div className="products-details flex flex-col gap-[50px]">
                     <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
                         <div className="product-bg-img flex flex-col gap-[10px]">
-                            <img src={mainImage} alt="Product Image" className="products_images w-full sm:w-full h-[500px] object-cover" />
+                            <img src={mainImage} alt="Product Image" className="products_images w-screen sm:w-screen h-[500px] object-cover" />
 
                             <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
                                 {productsImages.map((product) => (
@@ -91,7 +90,7 @@ const ProductDetails = () => {
                                         key={product.id}
                                         src={product.image}
                                         alt="Product Image"
-                                        className="products_images w-[150px] object-cover hover:border-pale hover:border-[2px]"
+                                        className="products_images w-[100px] h-[100px] object-cover hover:border-pale hover:border-[2px]"
                                         onClick={() => handleImageChange(product.image)}
                                     />
                                 ))}
@@ -99,8 +98,8 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="flex flex-col gap-5">
-                            <p className="font-medium text-2xl ">Logitech Salvo Concept Gaming Mouse</p>
-                            <h4 className="text-xl font-medium text-primary">$120.00</h4>
+                            <p className="font-semibold text-[20px] sm:text-3xl">Cotton White Striped Dark Blue</p>
+                            <h4 className="text-xl font-medium text-Charcoal">₹1,499.00</h4>
                             <p className="max-w-[400px] font-Playfair text-sm text-[#353535] font-normal">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto culpa enim exercitationem! Laborum sequi dolorum alias expedita? Quo doloribus exercitationem minus iste velit molestiae aut saepe placeat fugit porro!
                             </p>
@@ -115,7 +114,7 @@ const ProductDetails = () => {
                     </div>
 
                     <div className="mt-5">
-                        <p className="text-3xl">Product Information</p>
+                        <p className="text-3xl font-semibold">Product Information</p>
 
                         <div className="flex flex-col gap-7 mt-5">
                             <div className="font-Playfair">
@@ -127,13 +126,13 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="flex flex-col justify-start md:flex-row gap-5 sm:gap-4 w-full">
-                                <p className="text-3xl sm:w-[50%]">Product Highlight</p>
+                                <p className="text-3xl font-semibold sm:w-[50%]">Product Highlight</p>
 
                                 <div className="flex flex-col gap-3">
-                                    <li className="font-Playfair text-sm pb-2">Duis vel ipsum vitae est semper varius in id</li>
-                                    <li className="font-Playfair text-sm pb-2">Class aptent taciti sociosqu</li>
-                                    <li className="font-Playfair text-sm pb-2">Litora torquent per conubia nostra per</li>
-                                    <li className="font-Playfair text-sm pb-2">Inceptos himenaeos praesent</li>
+                                    <li className="font-Playfair text-sm pb-2">Dark Blue base with White Stripes</li>
+                                    <li className="font-Playfair text-sm pb-2">100% Premium Cotton</li>
+                                    <li className="font-Playfair text-sm pb-2">Machine wash</li>
+                                    <li className="font-Playfair text-sm pb-2">Striped</li>
                                 </div>
                             </div>
                         </div>
@@ -144,18 +143,18 @@ const ProductDetails = () => {
 
 
                 <div className="mt-12">
-                    <p className="text-3xl mb-5 capitalize">Related products</p>
+                    <p className="text-3xl mb-5 font-semibold capitalize">Related products</p>
 
                     <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm gap-5 justify-center">
                         {products.map((product) => (
                             <Link href={`/products/${product.name}`} key={product.id} className="product-link">
                                 <div className="product-card cursor-pointer">
                                     <div>
-                                        <img src={product.image} alt={product.name} className="product-img w-full h-[200px] object-cover" />
+                                        <img src={product.image} alt={product.name} className="product-img w-[300px] h-[200px]  object-cover" />
                                     </div>
                                     <div className="product-details py-2 flex flex-col gap-[2px]">
-                                        <p className="product-name font-Playfair font-semibold text-base">{product.name}</p>
-                                        <p className="product-price text-sm text-Charcoal  font-medium">{product.price}</p>
+                                        <p className="product-name font-Playfair font-semibold text-base capitalize">{product.name}</p>
+                                        <p className="product-price text-sm text-Charcoal font-medium">{product.price}</p>
                                     </div>
                                 </div>
                             </Link>
