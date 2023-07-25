@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="flex flex-col gap-2 text-center sm:text-start">
                     <h1 className="text-[28px] font-Playfair text-OffWhite font-medium">Smart Tailor & Cloth</h1>
-                    <p className="text-sm text-OffWhite font-Raleway w-[360px]">We are welcoming you to Smart Tailor & Cloths, where clothing goes beyond mere fabric and threads.</p>
+                    {/* <p className="text-sm text-OffWhite font-Raleway w-[360px]">We are welcoming you to Smart Tailor & Cloths, where clothing goes beyond mere fabric and threads.</p> */}
                 </div>
 
                 <div className="flex gap-10 text-center sm:text-start text-OffWhite">
