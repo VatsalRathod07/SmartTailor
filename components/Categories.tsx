@@ -2,8 +2,7 @@ import React from 'react'
 
 const Categories = () => {
     return (
-        <section className="products container px-5 py-10">
-
+        <section className="products container px-5 pt-20">
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 text-center">
                 <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 justify-around text-center">
                     <div className='flex flex-col gap-2 items-center text-lg  font-medium cursor-pointer'>
