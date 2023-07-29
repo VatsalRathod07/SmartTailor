@@ -8,14 +8,9 @@ const Home = () => {
       <div className="flex flex-col gap-10">
         {/* Conditional background images based on screen size */}
         <img
-          src="/img/deskbg.png"
+          src="/img/deskbg2.png"
           alt=""
-          className="w-screen h-screen object-cover bg-no-repeat hidden sm:block opacity-60"
-        />
-        <img
-          src="/img/smallbg.png"
-          alt=""
-          className="w-screen h-[700px] object-cover bg-no-repeat block sm:hidden"
+          className="w-screen h-screen object-cover bg-no-repeat opacity-30 sm:opacity-60 md:opacity-30"
         />
 
         {/* <div className="absolute inset-0 bg-gradient-to-b from-black to-black opacity-50 block sm:hidden"></div> */}
@@ -28,7 +23,7 @@ const Home = () => {
           </p>
           <Link
             href="/products"
-            className="text-lg text-OffWhite bg-Charcoal border-none transition ease-linear duration-700 px-5 py-1"
+            className="text-lg text-OffWhite bg-black border-none px-5 py-1"
           >
             Shop Now
           </Link>

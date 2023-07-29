@@ -1,5 +1,4 @@
 import Announcement from '@/components/Announcement'
-import Banner from '@/components/Banner'
 import Categories from '@/components/Categories'
 import Collection from '@/components/Collection'
 import Home from '@/components/Home'
@@ -14,7 +13,6 @@ const page = () => {
       <Product/>
       <Announcement/>
       <Collection/>
-      {/* <Banner/> */}
     </>
   )
 }

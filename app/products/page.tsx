@@ -3,18 +3,29 @@ import React, { useState } from 'react';
 import { BsFilterLeft } from 'react-icons/bs';
 import { products } from '@/components/ProductCard';
 import Link from 'next/link';
+// import { GoHome } from 'react-icons/go'
+import { IoIosArrowForward } from 'react-icons/io'
+import Pagination from '@/components/Pagination';
+// import Breadcrumbs from '@/components/Breadcrumbs';
+
 
 const ProductDetails = () => {
     const [sortingOption, setSortingOption] = useState('');
     const [showDropdown, setShowDropdown] = useState(false); // State to track whether the dropdown should be shown or hidden
 
-    const handleSortingChange = (event) => {
+    const handleSortingChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setSortingOption(event.target.value);
+        setShowDropdown(false); // Close the dropdown after selecting an option
     };
 
     const handleToggleDropdown = () => {
         setShowDropdown((prevState) => !prevState); // Toggle the state to show/hide the dropdown
     }
+
+    // const routes = [
+    //     { label: <GoHome size={15}/>, path: '/' },
+    //     { label: 'products', path: '/products' },
+    // ];
 
 
     // Sorting logic
@@ -37,9 +48,19 @@ const ProductDetails = () => {
         sortedProducts = [...products]; // Reset to default order
     }
 
+    const pageSize = 8
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const indexOfLastProduct = currentPage * pageSize;
+    const indexOfFirstProduct = indexOfLastProduct - pageSize;
+    const paginatedProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
     return (
-        <section className="products pt-5 sm:pt-10 pb-5 sm:pb-12 px-1 sm:px-5 bg-light">
-            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10">
+        <section className="products pt-5 sm:pt-10 pb-5 sm:pb-12 px-1 sm:px-5">
+            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10 bg-OffWhite">
+                {/* <nav className="text-sm mb-4">
+                    <Breadcrumbs routes={routes} />
+                </nav> */}
                 <div className="flex gap-3 sm:gap-0 justify-between items-center">
                     <h4 className="product-header text-Charcoal">Our Latest Product</h4>
 
@@ -68,44 +89,62 @@ const ProductDetails = () => {
                             <BsFilterLeft
                                 size={30}
                                 className="text-Charcoal cursor-pointer"
-                                onClick={handleToggleDropdown} // Toggle the dropdown when the icon is clicked
+                                onClick={handleToggleDropdown}// Toggle the dropdown when the icon is clicked
                             />
                         </div>
                         {showDropdown && (
                             <div className="absolute right-2 top-8 w-[300px] mt-2 bg-white border border-gray-300 rounded-md shadow-md z-10">
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('')}
+                                    onClick={() => {
+                                        setSortingOption(''); // Reset to default sorting
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Default sorting
                                 </div>
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('popularity')}
+                                    onClick={() => {
+                                        setSortingOption('popularity'); // Set the sorting option to popularity
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Sort by popularity
                                 </div>
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('rating')}
+                                    onClick={() => {
+                                        setSortingOption('rating'); // Set the sorting option to rating
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Sort by average rating
                                 </div>
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('latest')}
+                                    onClick={() => {
+                                        setSortingOption('latest'); // Set the sorting option to latest
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Sort by latest
                                 </div>
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('lowToHigh')}
+                                    onClick={() => {
+                                        setSortingOption('lowToHigh'); // Set the sorting option to lowToHigh
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Sort by price: low to high
                                 </div>
                                 <div
                                     className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-                                    onClick={() => setSortingOption('highToLow')}
+                                    onClick={() => {
+                                        setSortingOption('highToLow'); // Set the sorting option to highToLow
+                                        setShowDropdown(false); // Close the dropdown after selecting an option
+                                    }}
                                 >
                                     Sort by price: high to low
                                 </div>
@@ -114,7 +153,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
-                    {sortedProducts.map((product) => (
+                    {paginatedProducts.map((product) => (
                         <Link href={`/products/${product.name}`} key={product.id} className="product-link">
                             <div className="product-card cursor-pointer">
                                 <div>
@@ -132,6 +171,7 @@ const ProductDetails = () => {
                         </Link>
                     ))}
                 </div>
+                <Pagination total={sortedProducts?.length} pageSize={pageSize} onClick={(number: number) => { setCurrentPage(number) }} activePage={currentPage} />
             </div>
         </section >
     );

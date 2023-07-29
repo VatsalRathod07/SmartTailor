@@ -1,16 +1,19 @@
 "use client"
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { HiMenu } from 'react-icons/hi'
-import { GrFormClose } from 'react-icons/gr'
+import { HiMenu } from 'react-icons/hi';
+import { GrFormClose } from 'react-icons/gr';
 
 const Navbar = () => {
+  // State to manage the visibility of the Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Function to toggle the Sidebar visibility
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  // Function to close the Sidebar
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
@@ -29,35 +32,27 @@ const Navbar = () => {
             <HiMenu size={20} className="text-secondary" />
           </button>
         </div>
-        <ul className={` hidden sm:flex sm:gap-5 sm:list-none ${isSidebarOpen ? 'bg-white bg-opacity-60' : 'bg-white'}`}>
+        <ul className={`hidden sm:flex sm:gap-5 sm:list-none ${isSidebarOpen ? 'bg-white bg-opacity-60' : 'bg-white'}`}>
           <li>
-            <Link href="/" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black">
+            <Link href="/" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black" onClick={closeSidebar}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black">
+            <Link href="/products" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black" onClick={closeSidebar}>
               Products
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black">
+            <Link href="/about" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black" onClick={closeSidebar}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black">
+            <Link href="/contact" className="text-base  font-semibold font-Raleway text-Charcoal hover:text-black" onClick={closeSidebar}>
               Contact
             </Link>
           </li>
-          {/* <li>
-            <Link href="/cart" className="text-base flex relative  font-semibold">
-              <CgShoppingBag size={25} />
-              <div className="absolute left-5 transform -translate-x-1/2 -translate-y-1/2 bg-SlateGray px-[5px] rounded-lg">
-                <p className="text-OffWhite text-xs">1</p>
-              </div>
-            </Link>
-          </li> */}
         </ul>
       </div>
       <ul
@@ -74,31 +69,25 @@ const Navbar = () => {
         </li>
         <div className="flex flex-col justify-center gap-5">
           <li>
-            <Link href="/" className="text-base font-semibold">
+            <Link href="/" className="text-base font-semibold" onClick={closeSidebar}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products" className="text-base font-semibold">
+            <Link href="/products" className="text-base font-semibold" onClick={closeSidebar}>
               Products
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-base font-semibold">
+            <Link href="/about" className="text-base font-semibold" onClick={closeSidebar}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-base font-semibold">
+            <Link href="/contact" className="text-base font-semibold" onClick={closeSidebar}>
               Contact
             </Link>
           </li>
-
-          {/* <li>
-            <Link href="/cart" className="text-base font-semibold">
-              Cart
-            </Link>
-          </li> */}
         </div>
       </ul>
     </nav>

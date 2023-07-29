@@ -1,7 +1,9 @@
 "use client"
-import CartSection from '@/app/cart/page';
+// import CartSection from '@/app/cart/page';
+// import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { GoHome } from 'react-icons/go';
 
 
 const products = [
@@ -76,10 +78,17 @@ const ProductDetails = () => {
     //     }
     // };
 
+    const routes = [
+        { label: <GoHome size={15}/>, path: '/' },
+        { label: 'products', path: '/products' },
+    ];
     return (
         <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
-            <div className="product_content container p-5 sm:p-20 bg-white">
+            <div className="product_content container p-5 sm:p-20 bg-OffWhite">
                 <div className="products-details flex flex-col gap-[50px]">
+                {/* <nav className="text-sm pb-4">
+                    <Breadcrumbs routes={routes} />
+                </nav> */}
                     <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
                         <div className="product-bg-img flex flex-col gap-[10px]">
                             <img src={mainImage} alt="Product Image" className="products_images w-screen sm:w-screen h-[500px] object-cover" />
