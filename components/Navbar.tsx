@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className={`nav p-4 py-4 bg-white  text-Charcoal border-b-[.3px] ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-white'}`}>
       <div className="navbar_content w-full flex justify-between p-1 items-center">
-        <Link href="/" className="navbar_logo text-2xl font-semibold text-Charcoal hover:text-black font-Playfair tracking-[.5px]">
+        <Link href="/" className="navbar_logo text-lg sm:text-2xl font-semibold text-Charcoal hover:text-black font-Playfair tracking-[.5px]">
           Smart Tailor & Cloth
         </Link>
         <div className="flex justify-between gap-5 list-none sm:hidden">

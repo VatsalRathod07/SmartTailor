@@ -14,16 +14,16 @@ const page = () => {
                         <div className="flex flex-col gap-5 text-center sm:text-start">
                             <div className="flex flex-col sm:flex-row gap-5 items-center">
                                 <BsShop size={20}/>
-                                <p className="text-xl text-Charcoal font-Raleway">Shop No.FF, Shukan Residency, 7, New SG Rd, Vandematram, Gota, Ahmedabad, Gujarat 382481</p>
+                                <p className="text-lg sm:text-xl text-Charcoal font-DMSans">Shop No.FF, Shukan Residency, 7, New SG Rd, Vandematram, Gota, Ahmedabad, Gujarat 382481</p>
                             </div>
                             <div className="flex flex-col gap-2 justify-center sm:justify-start items-center sm:items-start ">
                                 <a href="tel:9725404270" className="flex gap-5 items-center">
                                     <FiPhoneCall size={20}/>
-                                    <p className="text-xl font-Raleway text-Charcoal">+91 9725404270</p>
+                                    <p className="text-xl font-DMSans text-Charcoal">+91 9725404270</p>
                                 </a>
                                 <a href="tel:8128751909" className="flex gap-5 items-center">
                                     <FiPhoneCall size={20}/>
-                                    <p className="text-xl font-Raleway text-Charcoal">+91 8128751909</p>
+                                    <p className="text-xl font-DMSans text-Charcoal">+91 8128751909</p>
                                 </a>
                             </div>
                         </div>

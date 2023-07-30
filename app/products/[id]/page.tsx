@@ -11,7 +11,7 @@ const products = [
         id: 1,
         name: 'blanket',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
-        price: '$153.00',
+        price: '₹609.00',
         image: 'https://cpimg.tistatic.com/07765791/b/4/Men-Unstitched-Check-Shirt-Fabric.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
@@ -22,7 +22,7 @@ const products = [
         id: 2,
         name: 'win',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
-        price: '$174.00',
+        price: '₹894.00',
         image: 'https://cdn.thelibasstore.com/wp-content/uploads/2019/07/LSMONZASH72DKBLBGBRCHKHBTWJUN.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
@@ -33,7 +33,7 @@ const products = [
         id: 3,
         name: 'fifth',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
-        price: '$145.00',
+        price: '₹656.00',
         image: 'https://cpimg.tistatic.com/07765787/b/4/Cotton-Checks-Shirt-Fabric.jpg',
         contact: '+91 123-456-7890',
         information: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?',
@@ -107,9 +107,9 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="flex flex-col gap-5">
-                            <p className="font-semibold text-[20px] sm:text-3xl">Cotton White Striped Dark Blue</p>
-                            <h4 className="text-xl font-medium text-Charcoal">₹1,499.00</h4>
-                            <p className="max-w-[400px] font-Playfair text-sm text-[#353535] font-normal">
+                            <p className="font-semibold text-[20px] sm:text-2xl">Cotton White Striped Dark Blue</p>
+                            <h4 className="text-xl font-DMSans font-medium text-black">₹1,499.00</h4>
+                            <p className="max-w-[400px] font-DMSans text-sm text-[#353535] font-normal">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto culpa enim exercitationem! Laborum sequi dolorum alias expedita? Quo doloribus exercitationem minus iste velit molestiae aut saepe placeat fugit porro!
                             </p>
 
@@ -126,7 +126,7 @@ const ProductDetails = () => {
                         <p className="text-3xl font-semibold">Product Information</p>
 
                         <div className="flex flex-col gap-7 mt-5">
-                            <div className="font-Playfair">
+                            <div className="font-DMSans">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                             </div>
 
@@ -138,10 +138,10 @@ const ProductDetails = () => {
                                 <p className="text-3xl font-semibold sm:w-[50%]">Product Highlight</p>
 
                                 <div className="flex flex-col gap-3">
-                                    <li className="font-Playfair text-sm pb-2">Dark Blue base with White Stripes</li>
-                                    <li className="font-Playfair text-sm pb-2">100% Premium Cotton</li>
-                                    <li className="font-Playfair text-sm pb-2">Machine wash</li>
-                                    <li className="font-Playfair text-sm pb-2">Striped</li>
+                                    <li className="font-DMSans text-sm pb-2">Dark Blue base with White Stripes</li>
+                                    <li className="font-DMSans text-sm pb-2">100% Premium Cotton</li>
+                                    <li className="font-DMSans text-sm pb-2">Machine wash</li>
+                                    <li className="font-DMSans text-sm pb-2">Striped</li>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ const ProductDetails = () => {
                                     </div>
                                     <div className="product-details py-2 flex flex-col gap-[2px]">
                                         <p className="product-name font-Playfair font-semibold text-base capitalize">{product.name}</p>
-                                        <p className="product-price text-sm text-Charcoal font-medium">{product.price}</p>
+                                        <p className="product-price font-DMSans text-sm text-black font-medium">{product.price}</p>
                                     </div>
                                 </div>
                             </Link>

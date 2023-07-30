@@ -165,7 +165,7 @@ const ProductDetails = () => {
                                 </div>
                                 <div className="product-details py-2 flex flex-col gap-[2px]">
                                     <p className="product-name font-Playfair font-semibold text-base capitalize">{product.name}</p>
-                                    <p className="product-price text-sm text-Charcoal font-medium">{product.price}</p>
+                                    <p className="product-price text-sm text-black font-DMSans font-medium">{product.price}</p>
                                 </div>
                             </div>
                         </Link>

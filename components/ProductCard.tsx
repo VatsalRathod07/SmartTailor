@@ -191,7 +191,7 @@ const ProductsCard = () => {
                                 <p className="product-name font-Playfair font-normal text-base capitalize">
                                     {product.name}
                                 </p>
-                                <p className="product-price text-sm text-Charcoal font-medium">
+                                <p className="product-price font-DMSans text-sm text-black font-medium">
                                     {product.price}
                                 </p>
                             </div>
