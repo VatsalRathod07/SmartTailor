@@ -84,7 +84,7 @@ const ProductDetails = () => {
     ];
     return (
         <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
-            <div className="product_content container p-5 sm:p-20 bg-OffWhite">
+            <div className="product_content container p-3 sm:p-20 bg-OffWhite">
                 <div className="products-details flex flex-col gap-[50px]">
                 {/* <nav className="text-sm pb-4">
                     <Breadcrumbs routes={routes} />
@@ -107,9 +107,9 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="flex flex-col gap-5">
-                            <p className="font-semibold text-[20px] sm:text-2xl">Cotton White Striped Dark Blue</p>
-                            <h4 className="text-xl font-DMSans font-medium text-black">₹1,499.00</h4>
-                            <p className="max-w-[400px] font-DMSans text-sm text-[#353535] font-normal">
+                            <p className="font-semibold text-base sm:text-2xl">Cotton White Striped Dark Blue</p>
+                            <h4 className="text-base font-DMSans font-medium">₹1,499.00</h4>
+                            <p className="max-w-[400px] font-DMSans text-sm font-normal">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto culpa enim exercitationem! Laborum sequi dolorum alias expedita? Quo doloribus exercitationem minus iste velit molestiae aut saepe placeat fugit porro!
                             </p>
 
@@ -123,10 +123,10 @@ const ProductDetails = () => {
                     </div>
 
                     <div className="mt-5">
-                        <p className="text-3xl font-semibold">Product Information</p>
+                        <p className="text-xl sm:text-3xl font-semibold">Product Information</p>
 
                         <div className="flex flex-col gap-7 mt-5">
-                            <div className="font-DMSans">
+                            <div className="font-DMSans text-sm">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                             </div>
 
@@ -135,7 +135,7 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="flex flex-col justify-start md:flex-row gap-5 sm:gap-4 w-full">
-                                <p className="text-3xl font-semibold sm:w-[50%]">Product Highlight</p>
+                                <p className="text-xl sm:text-3xl font-semibold sm:w-[50%]">Product Highlight</p>
 
                                 <div className="flex flex-col gap-3">
                                     <li className="font-DMSans text-sm pb-2">Dark Blue base with White Stripes</li>

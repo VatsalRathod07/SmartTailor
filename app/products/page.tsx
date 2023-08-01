@@ -1,12 +1,9 @@
 "use client"
 import React, { useState } from 'react';
-import { BsFilterLeft } from 'react-icons/bs';
+import { PiSortAscendingLight } from 'react-icons/pi';
 import { products } from '@/components/ProductCard';
 import Link from 'next/link';
-// import { GoHome } from 'react-icons/go'
-import { IoIosArrowForward } from 'react-icons/io'
 import Pagination from '@/components/Pagination';
-// import Breadcrumbs from '@/components/Breadcrumbs';
 
 
 const ProductDetails = () => {
@@ -57,7 +54,7 @@ const ProductDetails = () => {
 
     return (
         <section className="products pt-5 sm:pt-10 pb-5 sm:pb-12 px-1 sm:px-5">
-            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10 bg-OffWhite">
+            <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-10 bg-white">
                 {/* <nav className="text-sm mb-4">
                     <Breadcrumbs routes={routes} />
                 </nav> */}
@@ -86,7 +83,7 @@ const ProductDetails = () => {
                     <div className="relative flex sm:hidden">
                         <div className="">
                             {/* BsFilterLeft */}
-                            <BsFilterLeft
+                            <PiSortAscendingLight
                                 size={30}
                                 className="text-Charcoal cursor-pointer"
                                 onClick={handleToggleDropdown}// Toggle the dropdown when the icon is clicked
@@ -157,15 +154,13 @@ const ProductDetails = () => {
                         <Link href={`/products/${product.name}`} key={product.id} className="product-link">
                             <div className="product-card cursor-pointer">
                                 <div>
-                                    <img
-                                        src={product.image}
-                                        alt={product.name}
-                                        className="product-img w-[300px] h-[200px] object-cover"
-                                    />
+                                    <img src={product.image} alt={product.name} className="product-img h-[200px] w-screen object-cover object-center lg:h-[300px] lg:w-screen rounded-md" />
                                 </div>
-                                <div className="product-details py-2 flex flex-col gap-[2px]">
-                                    <p className="product-name font-Playfair font-semibold text-base capitalize">{product.name}</p>
-                                    <p className="product-price text-sm text-black font-DMSans font-medium">{product.price}</p>
+                                <div className="mt-4 flex flex-col gap-1">
+                                    <h3 className="text-base text-black font-medium capitalize">
+                                        {product.name}
+                                    </h3>
+                                    <p className="text-sm font-normal text-neutral-700">{product.price}</p>
                                 </div>
                             </div>
                         </Link>

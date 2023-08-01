@@ -1,7 +1,10 @@
+"use client"
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
+import { useEffect, useState } from 'react';
 import Footer from '@/components/Footer'
+import Announcement from '@/components/Announcement'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,12 +16,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [path, setPath] = useState('/')
+
+  useEffect(() => {
+    // Update the path state with the current pathname of the URL
+    setPath(window.location.pathname);
+  }, []);
+
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        {/* Check if the path is the root ('/') */}
+        {path === '/' && <Announcement />}
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )

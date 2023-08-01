@@ -1,4 +1,3 @@
-import Announcement from '@/components/Announcement'
 import Categories from '@/components/Categories'
 import Collection from '@/components/Collection'
 import Home from '@/components/Home'
@@ -9,10 +8,9 @@ const page = () => {
   return (
     <>
       <Home />
-      <Categories/>
-      <Product/>
-      <Announcement/>
-      <Collection/>
+      <Categories />
+      <Product />
+      <Collection />
     </>
   )
 }

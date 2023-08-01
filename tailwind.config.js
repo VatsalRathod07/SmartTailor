@@ -17,7 +17,7 @@ module.exports = {
       },
 
       fontFamily: {
-        DMSans: ['DM Sans, sans-seri']
+        // DMSans: ['DM Sans, sans-seri']
       }
     },
   },

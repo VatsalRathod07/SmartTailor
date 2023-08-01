@@ -1,23 +1,28 @@
 import Link from 'next/link';
 import React from 'react';
-import { BsArrowRightShort } from 'react-icons/bs';
 
 const Home = () => {
   return (
     <div className="home relative">
-      <div className="flex flex-col gap-10">
+      <div className="flex">
         <img
-          src="https://images.unsplash.com/photo-1631515998048-8c5a1df64114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          src="https://images.unsplash.com/photo-1603570707325-5d4d281ca924?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHNld2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
           alt=""
-          className="w-screen h-screen object-cover bg-no-repeat"
+          className="sm:w-[50%] w-full h-full sm:h-screen object-cover bg-no-repeat hidden sm:block"
+        />
+        {/* Hidden on smaller screens */}
+        <img
+          src="https://images.unsplash.com/photo-1536867520774-5b4f2628a69b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFicmljfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60" // Replace with the URL of your second image
+          alt=""
+          className="object-cover bg-no-repeat sm:w-[50%] w-full h-full sm:h-screen" // Add 'hidden sm:block' class
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-black opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-black opacity-30 sm:opacity-20"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-5 items-center">
           <p className="text-OffWhite text-base sm:text-xl font-Raleway font-semibold uppercase [word-spacing:2px]">
             Welcome To The Smart Tailor
           </p>
-          <p className="text-OffWhite font-DMSans text-[24px] sm:text-5xl font-light sm:leading-[60px] w-[370px] sm:w-[650px]">
+          <p className="text-OffWhite font-DMSans text-[24px] sm:text-4xl font-light sm:leading-[60px] w-[370px] sm:w-[550px]">
             Let's Stitch Your Style to Perfection at Our Tailoring Shop!
           </p>
           <Link

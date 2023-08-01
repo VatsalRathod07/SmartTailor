@@ -180,24 +180,22 @@ export const products = [
 
 const ProductsCard = () => {
     return (
-        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
-            {products.filter((data) => data.id <= 6).map((product) => (
-                    <Link href={`/products/${product.name}`} key={product.name} className="product-link">
-                        <div className="product-card cursor-pointer">
-                            <div>
-                                <img src={product.image} alt={product.name} className="product-img w-[300px] h-[200px] object-cover"/>
-                            </div>
-                            <div className="product-details py-1 flex flex-col gap-[2px]">
-                                <p className="product-name font-Playfair font-normal text-base capitalize">
-                                    {product.name}
-                                </p>
-                                <p className="product-price font-DMSans text-sm text-black font-medium">
-                                    {product.price}
-                                </p>
-                            </div>
+        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 justify-center">
+            {products.filter((data) => data.id <= 8).map((product) => (
+                <Link href={`/products/${product.name}`} key={product.name} className="product-link">
+                    <div className="product-card cursor-pointer">
+                        <div>
+                            <img src={product.image} alt={product.name} className="product-img h-[200px] w-screen object-cover object-center lg:h-[300px] lg:w-screen rounded-md" />
                         </div>
-                    </Link>
-                ))}
+                        <div className="mt-4 flex flex-col gap-1">
+                            <h3 className="text-base text-black font-medium capitalize">
+                                {product.name}
+                            </h3>
+                            <p className="text-sm font-normal text-neutral-700">{product.price}</p>
+                        </div>
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 }
