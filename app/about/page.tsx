@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="about container px-5 sm:px-10 pt-16 flex flex-col items-center">
       <div className="mb-10">
-        <h2 className="text-xl sm:text-5xl font-Playfair font-medium mb-6">ABOUT SMART TAILOR'S</h2>
+        <h2 className="text-xl sm:text-5xl font-Playfair font-medium mb-6">ABOUT SMART TAILORS</h2>
         <p className="text-base font-normal font-DMSans text-neutral-600 mb-8">
           At Smart Tailor & Cloths, we believe that clothing should be more than just fabric and threads; it should be an expression of your unique style and personality. We are a dedicated team of fashion enthusiasts and expert tailors, committed to providing you with the finest bespoke clothing and top-notch customer service
         </p>
