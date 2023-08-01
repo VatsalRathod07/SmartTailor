@@ -27,12 +27,13 @@ const ProductDetails = () => {
 
     // Sorting logic
     let sortedProducts = [...products];
+
     if (sortingOption === 'popularity') {
-        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+        sortedProducts.sort((a: any, b: any) => b.popularity - a.popularity);
     } else if (sortingOption === 'rating') {
-        sortedProducts.sort((a, b) => b.rating - a.rating);
+        sortedProducts.sort((a: any, b: any) => b.rating - a.rating);
     } else if (sortingOption === 'latest') {
-        sortedProducts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        sortedProducts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } else if (sortingOption === 'lowToHigh') {
         sortedProducts.sort((a, b) => parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1)));
     } else if (sortingOption === 'highToLow') {
@@ -44,6 +45,7 @@ const ProductDetails = () => {
     } else {
         sortedProducts = [...products]; // Reset to default order
     }
+
 
     const pageSize = 8
     const [currentPage, setCurrentPage] = useState(1)
