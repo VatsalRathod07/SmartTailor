@@ -23,7 +23,7 @@ const Home = () => {
             Welcome To The Smart Tailor
           </p>
           <p className="text-OffWhite font-DMSans text-[24px] sm:text-4xl font-light sm:leading-[60px] w-[370px] sm:w-[550px]">
-            Let's Stitch Your Style to Perfection at Our Tailoring Shop!
+            Lets Stitch Your Style to Perfection at Our Tailoring Shop!
           </p>
           <Link
             href="/products"
