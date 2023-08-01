@@ -1,8 +1,6 @@
-"use client"
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { useEffect, useState } from 'react';
 import Footer from '@/components/Footer'
 import Announcement from '@/components/Announcement'
 
@@ -16,18 +14,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [path, setPath] = useState('/')
-
-  useEffect(() => {
-    // Update the path state with the current pathname of the URL
-    setPath(window.location.pathname);
-  }, []);
 
   return (
     <html lang="en">
       <body>
-        {/* Check if the path is the root ('/') */}
-        {path === '/' && <Announcement />}
+        <Announcement />
         <Navbar />
         {children}
         <Footer />
