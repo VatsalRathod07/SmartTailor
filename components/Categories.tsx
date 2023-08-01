@@ -20,7 +20,7 @@ const Categories = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 justify-around text-center">
                     <div className='flex flex-col gap-2 items-center text-lg  font-semibold cursor-pointer'>
-                        <img src="/img/indowestern.png" alt="" className="hover:scale-110 transition duration-700 ease-in-out w-11 " />
+                        <img src="/img/Indowestern.png" alt="" className="hover:scale-110 transition duration-700 ease-in-out w-11 " />
                         <p className="">Indo-Western</p>
                     </div>
                     <div className='flex flex-col gap-2 items-center text-lg  font-semibold cursor-pointer'>
